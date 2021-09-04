@@ -4,5 +4,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello World!'
+    data = {
+        'name': 'World',
+        'age': '42'
+    }
     

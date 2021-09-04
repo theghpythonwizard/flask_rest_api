@@ -9,7 +9,7 @@ def hello():
         'name': 'World',
         'age': '42' 
     }
-    data = json.dumps(data)
+    # data = json.dumps(data)
 
     return data
     

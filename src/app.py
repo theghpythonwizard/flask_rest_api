@@ -6,6 +6,7 @@ app = Flask(__name__)
 def hello():
     data = {
         'name': 'World',
-        'age': '42'
+        'age': '42' 
     }
+    return data
     

@@ -1,0 +1,42 @@
+name: Test Project Weekly DRI Tracking Issue
+on:
+  push:
+    branches:
+      - actions_issue_creation
+  # schedule:
+  #   # - cron: "30 01 * * 1"
+jobs:
+  create_issue:
+    name: Create DRI Tracking Issue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        
+
+      - name: Create DRI Tracking Issue
+        uses: imjohnbo/issue-bot@v3
+        with:
+          token: ${{ secrets.MACCLOUD_PROJECT_PAT }}
+          assignees: ""
+          labels: "DRI-operations, primary-DRI, current-sprint, ${{ steps.date.outputs.date }}"
+          title: "This is a test DRI Tracking Issue ${{ steps.date.outputs.date }}"
+          # project-type: organization
+          # project: 1 #https://github.com/orgs/github/projects/3205/
+          # column: Test
+          body: |
+            ## DRI Notes for the week
+            
+            ### Major issues
+            
+            ### Minor issues
+            
+            ### Noise
+            
+            ### Sev2 Updates
+          pinned: true
+          close-previous: true
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        

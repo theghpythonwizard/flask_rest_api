@@ -2,6 +2,7 @@ name: Test Project Weekly DRI Tracking Issue
 on:
   push:
     branches:
+      - main
       - actions_issue_creation
   # schedule:
   #   # - cron: "30 01 * * 1"

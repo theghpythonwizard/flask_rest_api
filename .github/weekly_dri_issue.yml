@@ -37,6 +37,6 @@ jobs:
             ### Sev2 Updates
           pinned: true
           close-previous: true
-        # env:
-        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         

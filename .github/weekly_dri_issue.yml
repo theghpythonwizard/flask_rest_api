@@ -2,6 +2,7 @@ name: Test Project Weekly DRI Tracking Issue
 on:
   push:
     branches:
+      - main
       - actions_issue_creation
   # schedule:
   #   # - cron: "30 01 * * 1"
@@ -14,7 +15,6 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
         
-
       - name: Create DRI Tracking Issue
         uses: imjohnbo/issue-bot@v3
         with:

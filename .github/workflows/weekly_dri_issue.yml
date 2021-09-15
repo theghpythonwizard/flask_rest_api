@@ -22,7 +22,7 @@ jobs:
           assignees: ""
           labels: "DRI-operations, primary-DRI, current-sprint, ${{ steps.date.outputs.date }}"
           title: "This is a test DRI Tracking Issue ${{ steps.date.outputs.date }}"
-          project-type: Repository
+          # project-type: Repository
           project: 1 #https://github.com/orgs/github/projects/3205/
           column: Test
           body: |
